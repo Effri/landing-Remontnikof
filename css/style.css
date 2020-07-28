@@ -139,6 +139,11 @@ button::-moz-focus-inner {
 	box-shadow: none;
 }
 
+.form-control,
+.form-inline {
+	border-radius: 6px;
+}
+
 .form-control:focus {
 	border: 1px solid #ced4da;
 	box-shadow: none;
@@ -261,10 +266,14 @@ small {
 }
 
 .green {
-	padding: 5px;
+    padding: 15px 14px 12px 17px;
+    margin-bottom: 11px;
+    display: inline-block;
+    font-size: 40px;
+	font-weight: 700;
 	color: #fff;
-	border-radius: 5px;
-	background: #6aa417;
+    border-radius: 6px;
+    background: #6aa417;
 }
 
 header .content {
@@ -1176,13 +1185,14 @@ ul.timeline>li:before {
 .panel {
 	cursor: pointer;
 	margin-bottom: 20px;
-	padding: 26px 32px;
+	padding: 23px 32px;
 	border-radius: 6px;
 	box-shadow: 0 16px 38px 0 #dee2e6;
 	transition: 0.3s all;
 }
 
 .panel-title {
+	margin: 0;
 	font-size: 18px;
 	font-weight: 600;
 }
@@ -1882,6 +1892,11 @@ footer .small a {
 
 	.fixed .tel {
 		margin-right: 0;
+	}
+
+	.green {
+		padding: 8px;
+		font-size: 33px;
 	}
 
 	.top-items {
