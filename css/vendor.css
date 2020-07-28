@@ -2905,6 +2905,7 @@ textarea.form-control.is-invalid {
 
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
+  transition: 0.3s all;
 }
 
 a.btn.disabled,

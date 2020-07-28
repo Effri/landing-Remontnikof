@@ -15,6 +15,14 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+$(".date").click(function(e) {
+	e.preventDefault();
+	$(".date").removeClass('button active');
+	$(this).addClass('button active');
+  });
+});
+
 $(document).ready(function() {
 
 	$('input[name="phone"]').mask('+7 (999) 999-99-99');
@@ -42,7 +50,7 @@ $(document).ready(function() {
 		pager: false,
 		nextSelector: '.btn-next-container',
 		// nextText: '<div class="btn-next"><span>Следующий вопрос</span></div>',
-		nextText: '<div class="btn-next"><button class="btn btn-danger"><span class="dots3">Следующий вопрос</span></button></div>',
+		nextText: '<div class="btn-next"><button class="btn btn-danger"><span>Следующий вопрос</span></button></div>',
 		onSliderLoad: function (currentIndex) {
 			// первоначальные стили
 			$('.main-progress__text').eq(currentIndex).addClass('main-progress__text_active');
@@ -141,6 +149,13 @@ $(".pick-item__label").hover(function () {
 	});
   });
   
+//   $(".date").click(function(event) {
+// 	// event.preventDefault();
+// 	$('.btn-outline-light').addClass('date_active');
+//   });
 
+//   document.getElementById('date').onclick = function() {
+// 	document.getElementsByClassName('btn-outline-light').classList.add('date_active');
+//   }
 
   
