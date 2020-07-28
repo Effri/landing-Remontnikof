@@ -1840,6 +1840,11 @@ footer .small a {
 		width: 100%;
 	}
 
+	.fixed .top-item1,
+	.fixed .top-item2 {
+		justify-content: center;
+	}
+
 	.container {
 		max-width: 320px;
 	}
@@ -1887,9 +1892,9 @@ footer .small a {
 		min-height: 75vh;
 	}
 
-	/* .quiz-bg {
-		background-position: initial;
-	} */
+	.quiz-bg {
+		background-position-y: -60px;
+	}
 
 	.step-slide__grid {
 		display: grid;
