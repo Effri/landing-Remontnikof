@@ -49,7 +49,6 @@ $(document).ready(function() {
 		touchEnabled: false,
 		pager: false,
 		nextSelector: '.btn-next-container',
-		// nextText: '<div class="btn-next"><span>Следующий вопрос</span></div>',
 		nextText: '<div class="btn-next"><button class="btn btn-danger"><span>Следующий вопрос</span></button></div>',
 		onSliderLoad: function (currentIndex) {
 			// первоначальные стили
@@ -99,12 +98,6 @@ $(document).ready(function() {
 		$('.btn-next').disabled = false;
 	});
 
-	// $('.pick-item__input').on('change', 'input', function(event) {
-	// 	// event.preventDefault();
-	// 	$('.btn-next-container').addClass('btn-next-container_active');
-	// 	$('.btn-next').addClass('btn-next_active btn-shine');
-	// });
-
 	$('.datepicker-here').click(function(event) {
         event.preventDefault();
         $('.btn-next-container').addClass('btn-next-container_active');
@@ -148,14 +141,3 @@ $(".pick-item__label").hover(function () {
 	  queue: false
 	});
   });
-  
-//   $(".date").click(function(event) {
-// 	// event.preventDefault();
-// 	$('.btn-outline-light').addClass('date_active');
-//   });
-
-//   document.getElementById('date').onclick = function() {
-// 	document.getElementsByClassName('btn-outline-light').classList.add('date_active');
-//   }
-
-  
