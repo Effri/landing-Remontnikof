@@ -15,6 +15,68 @@ $(document).ready(function(){
     });
 });
 
+
+
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+	//smoothscroll
+	// $("a[href*='#']").on('click', function (e) {
+	// $('a[href*=\\#]:not([href=\\#])').on('click', function (e) {
+	$('a[href*=\"#\"]').on('click', function (e) {
+    // $('a[href]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+			$('#header .collapse').removeClass("show");
+            $(this).removeClass('active');
+		})
+		$('#header .collapse').removeClass("show");
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+           // 'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#header a').each(function () {
+        var currLink = $(this);
+		var refElement = $(currLink.attr('a[href^="#"]'));
+		if (refElement.scrollTop() > 100 <= scrollPos && refElement.scrollTop() > 100 + refElement.height() > scrollPos) {
+		// if ($(window).scrollTop() > 100) {
+			$('#navbarNav ul li a').removeClass("active");
+			$('#header .collapse').removeClass("show");
+			currLink.addClass("active");
+			currLink.addClass("show");
+        }
+        else{
+			$('#header .collapse').removeClass("show");
+			currLink.removeClass("active");
+			currLink.removeClass("show");
+        }
+    });
+}
+
+$(document).ready(function () {
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+	  var div = $("#navbarNav ul li"); // тут указываем ID элемента
+	  if (!div.is(e.target) // если клик был не по нашему блоку
+		  && div.has(e.target).length === 0) { // и не по его дочерним элементам
+		//  div.hide(); // скрываем его
+	  }
+	});
+  });
+
 $(document).ready(function(){
 $(".date").click(function(e) {
 	e.preventDefault();
